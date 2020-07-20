@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuarentena KARANAVIRIS
+    </title>
+    
+    <!-- Esto carga todo lo que tiene que ver con firebase (autenticación, database, storage, hosting, functions, mlkit) -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <!-- aquí sólo estamos agregando lo que vamos a usar, que es el firestore -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>karanavirissss</h1>
+    <div class= "contenido">
+        <form id = "add-item-form"></form>
+        <ul id= "lista-items"></ul>
+    </div>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCItUshtCmOmuDVyPJoKUEvQTiiQcXxcwQ",
+        // el apikey es para saber a qué proyecto accedemos
+        authDomain: "karanaviris.firebaseapp.com",
+        databaseURL: "https://karanaviris.firebaseio.com",
+        projectId: "karanaviris",
+        storageBucket: "karanaviris.appspot.com",
+        messagingSenderId: "83725808586",
+        appId: "1:83725808586:web:8da4ca1f1827e113d65533"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // Aquí creamos una referencias a la base de datos para cada vez que queramos interactuar con ella
+    const db = firebase.firestore();
+    // Seteamos para no tener un warning error en la consola y para trabajar con snapshots
+    db.settings({timestampsInSnapshots: true});
+    </script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
